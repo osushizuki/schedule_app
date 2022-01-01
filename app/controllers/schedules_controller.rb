@@ -2,7 +2,7 @@ class SchedulesController < ApplicationController
   before_action :schedule_set, except: [:index,:new,:create]
 
   def index
-    @schedules = Schedule.all
+    @schedules = Schedule.all.order(dating: :asc,start_time: :asc)
   end
 
   def new
