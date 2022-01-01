@@ -1,0 +1,30 @@
+.taitol {
+  font-size: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.in-schedule{
+  text-align: center;
+}
+
+.content {
+  text-align: center ;
+  border: 1px solid #000;
+  width: 300px;
+  
+}
+
+.main{
+  display: flex;
+  overflow-y: scroll; 
+}
+
+.indispensable{
+  color: red;
+}
+
+.memo-input{
+  width: 300px;
+  height: 100px;
+}

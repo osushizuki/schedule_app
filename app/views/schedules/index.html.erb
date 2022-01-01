@@ -1,3 +1,30 @@
-<div class="in-menu">
+<%= render partial:"head" %>
+
+<div class = main>
+<% @schedules.each do |schedule| %>
+  <%= link_to schedule_path(schedule.id) do %>
+    <div class= content>
+      <h3>
+        <%= schedule.company %>
+      </h3>
+
+      <h3>
+        <%= schedule.interview.name %>
+      </h3>
+
+      <h3>
+        <%= schedule.dating.strftime('%Y/%m/%d') %>
+      </h3>
+
+      <h3>
+        <%= schedule.start_time.strftime('%H:%M') %>ー<%= schedule.end_time.strftime('%H:%M') %>
+      </h3>
+
+    </div>
+  <% end %>
+<% end %>
+</div>
+
+<div class="in-schedule">
   <%= link_to(new_schedule_path) do %>追加する<% end %>
 </div>

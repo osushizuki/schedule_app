@@ -19,18 +19,22 @@ class SchedulesController < ApplicationController
   end
 
   def show
-    
   end
 
   def edit
   end
 
   def update
-
+    if @schedule.update(schedule_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   def destroy
-    
+    @schedule.destroy
+    redirect_to root_path
   end
 
   private
