@@ -20,7 +20,8 @@
   <%= @schedule.memo %>
 </h3>
 
-
-<%= link_to "スケジュール編集", edit_schedule_path, method: :get %>
-<div>or</div>
+<% if @schedule.dating > Date.today %>
+  <%= link_to "スケジュール編集", edit_schedule_path, method: :get %>
+  <div>or</div>
+<% end %>
 <%= link_to "スケジュール削除", schedule_path(@schedule.id), method: :delete %>

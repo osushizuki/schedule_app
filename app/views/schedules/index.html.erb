@@ -3,7 +3,12 @@
 <div class = main>
 <% @schedules.each do |schedule| %>
   <%= link_to schedule_path(schedule.id) do %>
+
     <div class= content>
+      <% if schedule.dating < Date.today  %>
+        <h3 class= end_content>終了しました！</h3>
+      <% end %>
+
       <h3>
         <%= schedule.company %>
       </h3>
